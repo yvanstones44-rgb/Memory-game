@@ -1,0 +1,16 @@
+{
+  "name": "Memory Game",
+  "short_name": "Memory",
+  "description": "Jeu de mémoire : trouvez toutes les paires !",
+  "lang": "fr",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#3a2fd6",
+  "theme_color": "#3a2fd6",
+  "icons": [
+    { "src": "icon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any" },
+    { "src": "icon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "maskable" }
+  ]
+}
