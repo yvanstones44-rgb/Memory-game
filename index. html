@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <meta name="theme-color" content="#3a2fd6">
+  <title>Memory Game</title>
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="icon" type="image/svg+xml" href="icon.svg">
+  <link rel="apple-touch-icon" href="icon.svg">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <main class="app">
+
+    <header class="header">
+      <div class="logo" aria-hidden="true">🧠</div>
+      <div class="titles">
+        <h1>Memory <span>Game</span></h1>
+        <p class="subtitle">Trouvez toutes les paires !</p>
+      </div>
+    </header>
+
+    <section class="stats" aria-label="Statistiques">
+      <div class="stat">
+        <span class="stat-icon" aria-hidden="true">⏱️</span>
+        <div class="stat-text">
+          <span class="stat-label">Temps</span>
+          <span class="stat-value" id="time">00:00</span>
+        </div>
+      </div>
+      <div class="stat">
+        <span class="stat-icon" aria-hidden="true">🎯</span>
+        <div class="stat-text">
+          <span class="stat-label">Tentatives</span>
+          <span class="stat-value" id="attempts">0</span>
+        </div>
+      </div>
+      <div class="stat">
+        <span class="stat-icon" aria-hidden="true">⭐</span>
+        <div class="stat-text">
+          <span class="stat-label">Score</span>
+          <span class="stat-value" id="score">0</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="board" id="board" aria-label="Grille de cartes"></section>
+
+    <button type="button" class="btn btn-restart" id="restart-btn">
+      <span aria-hidden="true">🔄</span> Recommencer
+    </button>
+
+    <p class="footer"><span aria-hidden="true">⭐</span> Bonne chance ! <span aria-hidden="true">⭐</span></p>
+
+  </main>
+
+  <!-- Écran de victoire -->
+  <div class="overlay hidden" id="victory" role="dialog" aria-modal="true" aria-labelledby="victory-title">
+    <div class="victory-box">
+      <div class="victory-trophy" aria-hidden="true">🏆</div>
+      <h2 id="victory-title">Bravo !</h2>
+      <p class="victory-text">Vous avez trouvé toutes les paires !</p>
+      <ul class="victory-stats">
+        <li><span>⏱️ Temps</span><strong id="final-time">00:00</strong></li>
+        <li><span>🎯 Tentatives</span><strong id="final-attempts">0</strong></li>
+        <li><span>⭐ Score</span><strong id="final-score">0</strong></li>
+        <li><span>🥇 Meilleur score</span><strong id="best-score">0</strong></li>
+      </ul>
+      <button type="button" class="btn btn-restart" id="replay-btn">
+        <span aria-hidden="true">🔄</span> Rejouer
+      </button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
